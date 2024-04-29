@@ -1,0 +1,27 @@
+version: '1.0.0'
+services:
+  web:
+    build: ./
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/var/www/html:ro
+  #mysql:
+  #  image: mysql:8.3.0
+  #  restart: always 
+  #  volumes:
+  #    - ./db:/var/www/html:rw
+  #  environment:
+  #    - MYSQL_ROOT_PASSWORD=admin@123456
+  #    - MYSQL_USER=user
+  #    - MYSQL_PASSWORD=123456
+  #phpmyadmin:
+  #  image: phpmyadmin:5.2.1
+  #  restart: always
+  #  ports:
+  #    - 8080:80
+  #  environment:
+  #    - PMA_HOST=mysql
+  #    - PMA_USER=user
+  
